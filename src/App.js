@@ -1,16 +1,27 @@
 import React, {Component} from 'react';
-import Animation from './Components/BackgroundAnimation/BackgroundAnimation.js'
-import Navigation from './Components/Navigation/Navigation'
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+  Redirect
+} from 'react-router-dom'
 import './App.css';
+import Homepage from './Pages/Homepage.jsx'
+import NotFoundPage from './Pages/404.jsx'
+import Services from './Pages/Services.js'
 class App extends Component {
-  render() {
+  
+  render() { 
     return (
-      <div>
-      {
-        // <Navigation />
-      }
-      	<Animation className='dt vh-100 w-100'/>
-      </div>
+      <Router>
+        <Switch>
+          <Route exact path='/' component={Homepage} />
+          <Route exact path='/404' component={NotFoundPage} />
+          <Route exact path='/services' component={Services} />
+          <Redirect to='/404'/>
+        </Switch>
+      </Router>
     );
   }
 }

@@ -1,18 +1,155 @@
 body {
   margin: 0;
   padding: 0;
-  }
-img {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: auto;
-  height: 100vh;
+  color: rgb(191, 191, 191);
   }
 
-*,
-*:after,
-*:before {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+.content {
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.principal {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.principal h1 {
+  padding-top: 0;
+  margin-top:0;
+  font-size: 70px;
+  margin-bottom: 20px;
+  color:rgb(191, 191, 191);
+  font-family:  Calibre-Bold;
+
+}
+
+.principal p {
+  font-size: 20px;
+}
+
+.principal button {
+  padding: 20px 20px;
+  border-radius: 90px;
+  margin-top: 3vh;
+}
+
+.slider {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+.slide1,.slide2,.slide3,.slide4,.slide5 {
+  animation: slide 40s infinite;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.slide1 {
+  background: url(./images/img4.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade 30s infinite;
+-webkit-animation:fade 30s infinite;
+
+} 
+.slide2 {
+  background: url(./images/img1.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade2 30s infinite;
+-webkit-animation:fade2 30s infinite;
+}
+.slide3 {
+    background: url(./images/img3.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade3 30s infinite;
+-webkit-animation:fade3 30s infinite;
+}
+@keyframes fade
+{
+  0%   {opacity:1}
+  33.333% { opacity: 0}
+  66.666% { opacity: 0}
+  100% { opacity: 1}
+}
+@keyframes fade2
+{
+  0%   {opacity:0}
+  33.333% { opacity: 1}
+  66.666% { opacity: 0 }
+  100% { opacity: 0}
+}
+@keyframes fade3
+{
+  0%   {opacity:0}
+  33.333% { opacity: 0}
+  66.666% { opacity: 1}
+  100% { opacity: 0}
+}
+
+.hvr-fade {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+}
+.hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
+  background-color: gray;
+  color: white;
+}
+
+/* Back Pulse */
+@-webkit-keyframes hvr-back-pulse {
+  50% {
+    background-color: rgba(32, 152, 209, 0.75);
+  }
+}
+@keyframes hvr-back-pulse {
+  50% {
+    background-color: rgba(32, 152, 209, 0.75);
+  }
+}
+.hvr-back-pulse {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  overflow: hidden;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+}
+.hvr-back-pulse:hover, .hvr-back-pulse:focus, .hvr-back-pulse:active {
+  -webkit-animation-name: hvr-back-pulse;
+  animation-name: hvr-back-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  background-color: #2098D1;
+  background-color: #2098d1;
+  color: white;
 }

@@ -1,47 +1,27 @@
 import React from 'react';
+import Logo from '../Logo/Logo'
+import {Link} from 'react-router-dom'
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './BackgroundAnimation.css'
 const Animation = () => {
 	return(
-		<div>
-			<Carousel data-interval="200" className='carousel-fade'>
-				  <Carousel.Item>
-				    <img
-				      className="db w-100"
-				      src='https://wallpaperaccess.com/full/821031.jpg'
-				      alt="First slide"
-				    />
-				    <Carousel.Caption>
-				      <h3>First slide label</h3>
-				      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-				    </Carousel.Caption>
-				  </Carousel.Item>
-				  <Carousel.Item>
-				    <img
-				      className="db w-100"
-				      src="https://i.pinimg.com/originals/db/ef/74/dbef74748b2718312746b664e962de8e.jpg"
-				      alt="Third slide"
-				    />
-
-				    <Carousel.Caption>
-				      <h3>Second slide label</h3>
-				      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				    </Carousel.Caption>
-				  </Carousel.Item>
-				  <Carousel.Item>
-				    <img
-				      className="db w-100"
-				      src="https://www.itl.cat/pngfile/big/55-559027_pc-game-wallpapers-hd-pc-gaming-wallpapers-hd.jpg"
-				      alt="Third slide"
-				    />
-
-				    <Carousel.Caption>
-				      <h3>Third slide label</h3>
-				      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-				    </Carousel.Caption>
-				  </Carousel.Item>
-			</Carousel>
+		<div className="main-container">
+			<div>
+				<div className='slider'>
+				  <div className='slide1'></div>
+				  <div className='slide2'></div>
+				  <div className='slide3'></div>
+				  <div className="content principal">
+				  	<Logo className="logo" />
+				  	<h1>PLUGABYTE</h1>
+				  	<button type="button" className="btn btn-outline-dark hvr-back-pulse">
+				  		Button
+				  		<Link to="/services"></Link>
+				  	</button>
+				  </div>
+				</div>
+			</div>
 		</div>
 	);
 }
