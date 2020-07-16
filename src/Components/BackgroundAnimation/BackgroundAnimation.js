@@ -15,10 +15,12 @@ const Animation = () => {
 				  <div className="content principal">
 				  	<Logo className="logo" />
 				  	<h1>PLUGABYTE</h1>
-				  	<button type="button" className="btn btn-outline-dark hvr-back-pulse">
-				  		Button
-				  		<Link to="/services"></Link>
-				  	</button>
+			  		
+			  		<Link to="/services">
+			  			<button type="button" className="icon-right signature btn btn-outline-dark hvr-back-pulse">
+			  				Button
+			  			</button>
+			  		</Link>
 				  </div>
 				</div>
 			</div>

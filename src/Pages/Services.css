@@ -1,0 +1,16 @@
+body {
+	margin: 0 auto;
+	min-height: 100%;
+	padding: 0;
+}
+html {
+	height: 100%;
+}
+/*.main-container {
+	background-color: red;
+	position: fixed;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+}*/
